@@ -18,6 +18,7 @@ Clean console UI with title
 
 Exit program by pressing ESC
 
+
 🛠 Technologies Used
 
 x86 Assembly Language
@@ -56,6 +57,7 @@ Press ESC to exit the program.
 Key	Action
 ESC	Exit the program
 ⚙️ Requirements
+
 
 Windows OS
 
