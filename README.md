@@ -1,93 +1,78 @@
-# Digital-Clock
-🕒 Digital Clock in Assembly (MASM + Irvine32)
+# Digital Clock in Assembly (MASM)
 
-This project is a real-time digital clock written in x86 Assembly Language using MASM, Irvine32 library, and the Windows API.
-It displays the current system time in HH:MM:SS format and updates every second with random text colors.
+A **console-based real-time digital clock** developed in **x86 Assembly Language** using **MASM**, the **Irvine32 library**, and the **Windows API**.
+The application retrieves the system time and displays it in **HH:MM:SS format**, updating every second with a dynamic text color.
 
-📌 Features
+## Overview
 
-Displays real-time system clock (Hour : Minute : Second)
+This project demonstrates the use of **Windows API integration**, **data structures**, and **console manipulation** in Assembly language.
+It efficiently updates the display only when the system second changes, ensuring smooth execution and minimal screen refresh.
 
-Uses GetLocalTime Windows API
+## Key Features
 
-Updates only when the second changes (efficient refresh)
+* Real-time system clock display
+* Uses Windows API `GetLocalTime`
+* Displays time in `HH:MM:SS` format
+* Random text color update every second
+* Efficient second-based refresh mechanism
+* Clean console layout with fixed positioning
+* Graceful exit using the **ESC** key
 
-Random text color on every second change
+## Technologies & Tools
 
-Clean console UI with title
+* **x86 Assembly Language**
+* **MASM (Microsoft Macro Assembler)**
+* **Irvine32 Library**
+* **Windows API**
+* **Windows Console Application**
 
-Exit program by pressing ESC
+## Project Structure
 
+```text
+DigitalClock.asm    Main Assembly source code
+README.md           Project documentation
+```
 
-🛠 Technologies Used
+## Program Workflow
 
-x86 Assembly Language
+1. Initializes the console and clears the screen.
+2. Displays the application title at a fixed location.
+3. Retrieves current system time using `GetLocalTime`.
+4. Stores time data in a `SYSTEMTIME` structure.
+5. Converts numeric time values into ASCII characters.
+6. Displays formatted time (`HH:MM:SS`) on the console.
+7. Updates the display and text color once per second.
+8. Monitors keyboard input for program termination.
 
-MASM (Microsoft Macro Assembler)
+## User Controls
 
-Irvine32 Library
+| Key | Action               |
+| --- | -------------------- |
+| ESC | Exit the application |
 
-Windows API (GetLocalTime)
+## System Requirements
 
-Windows Console
+* Windows Operating System
+* MASM installed and configured
+* Irvine32 library properly set up
+* Visual Studio or compatible assembler environment
 
-📂 Project Structure
-DigitalClock.asm   → Main assembly source file
-README.md          → Project documentation
+## Learning Outcomes
 
-▶️ How It Works
+* Practical use of Windows API in Assembly
+* Understanding and usage of structures (`SYSTEMTIME`)
+* Console cursor positioning and text formatting
+* Real-time program control using loops
+* Keyboard input handling in low-level programming
 
-The program clears the console screen.
+## Sample Output
 
-A title DIGITAL_CLOCK is displayed at a fixed position.
+```text
+            DIGITAL_CLOCK
 
-The GetLocalTime API fetches the current system time.
+                 14:35:09
+```
 
-Hours, minutes, and seconds are converted into ASCII format.
-
-The time is displayed in HH:MM:SS format.
-
-Each second update changes the text color randomly.
-
-The program keeps running in a loop.
-
-Press ESC to exit the program.
-
-⌨️ Controls
-Key	Action
-ESC	Exit the program
-⚙️ Requirements
-
-
-Windows OS
-
-MASM installed
-
-Irvine32 library properly configured
-
-Visual Studio or MASM-compatible assembler
-
-🧠 Learning Outcomes
-
-Understanding Windows API calls in Assembly
-
-Working with structures (SYSTEMTIME)
-
-Console text positioning and colors
-
-Real-time loop handling
-
-Keyboard input handling in Assembly
-
-📸 Output Preview
-           DIGITAL_CLOCK
-
-                14:35:09
-
-
-(Color changes every second)
-
-📜 License
-
-This project is for educational purposes.
-Feel free to use, modify, and share it.
+*(Text color changes every second)*
+## Author
+Just let me know.
