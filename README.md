@@ -74,5 +74,3 @@ README.md           Project documentation
 ```
 
 *(Text color changes every second)*
-## Author
-Just let me know.
